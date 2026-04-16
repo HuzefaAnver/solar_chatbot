@@ -15,6 +15,8 @@ CREATE TABLE IF NOT EXISTS chat_leads (
 CREATE TABLE IF NOT EXISTS chat_sessions (
   id          UUID DEFAULT gen_random_uuid() PRIMARY KEY,
   lead_id     UUID REFERENCES chat_leads(id) ON DELETE CASCADE,
+  calc_step   TEXT,
+  calc_data   JSONB DEFAULT '{}'::jsonb,
   created_at  TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
@@ -44,3 +46,4 @@ CREATE POLICY "Allow inserts" ON chat_sessions FOR INSERT WITH CHECK (true);
 CREATE POLICY "Allow selects" ON chat_sessions FOR SELECT USING (true);
 CREATE POLICY "Allow inserts" ON chat_messages FOR INSERT WITH CHECK (true);
 CREATE POLICY "Allow selects" ON chat_messages FOR SELECT USING (true);
+CREATE POLICY "Allow updates" ON chat_sessions FOR UPDATE USING (true);

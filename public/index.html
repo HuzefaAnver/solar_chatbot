@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina Solar — Premier Energy Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-img">
+        <img src="assets/logo.png" alt="Lumina Solar Logo" height="40" />
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Lumina Solar</span>
+        <span class="logo-tagline">Powering Progress</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#solutions">Solutions</a>
+      <a href="#products">Products</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-cta" onclick="openChat()">Contact Expert</button>
+      <button class="hamburger" onclick="toggleMenu()">☰</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<section class="hero" id="home" style="background-image: url('assets/hero-bg.png');">
+  <div class="hero-overlay"></div>
+  <div class="container hero-wrapper">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Leading Innovation in Pakistan
+      </div>
+      <h1 class="hero-title">
+        The Future Of<br/>
+        Energy is<br/>
+        <em>Brilliant</em>
+      </h1>
+      <p class="hero-sub">
+        Empowering homes and businesses across Pakistan with high-yield 
+        solar ecosystems designed for maximum savings and zero outages.
+      </p>
+      <div class="hero-stats">
+        <div class="stat"><strong>15,000+</strong><span>Homes Powered</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><strong>600+</strong><span>Expert Dealers</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><strong>25Y</strong><span>Warrenty</span></div>
+      </div>
+    </div>
+
+    <div class="hero-sidebar-widget">
+      <div class="widget-header">
+        <div class="widget-logo">🔆</div>
+        <div>
+          <h3>Power Solutions</h3>
+          <p>Request a custom energy survey</p>
+        </div>
+      </div>
+      <div class="widget-body">
+        <div class="widget-form">
+          <div class="input-group">
+            <label for="sideName">Name</label>
+            <input type="text" id="sideName" placeholder="Full Name" />
+          </div>
+          <div class="input-group">
+            <label for="sideEmail">Email</label>
+            <input type="email" id="sideEmail" placeholder="name@example.com" />
+          </div>
+          <button class="widget-btn" onclick="startChatFromWidget()">
+            Get My Free Quote
+          </button>
+        </div>
+      </div>
+      <div class="widget-footer">
+        <span>⏱️ Average Response: 10s</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ ABOUT US ═══════════════════════════ -->
+<section class="about-section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="visual-box">
+          <img src="assets/hero-bg.png" alt="Solar Installation" />
+        </div>
+        <div class="experience-badge">
+          <strong>15+</strong>
+          <span>Years Experience</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-label">Our Legacy</div>
+        <h2 class="section-title">Committed to a<br/>Greener Pakistan</h2>
+        <p>Lumina Solar is more than just a provider; we are architects of energy independence. Since our inception, we have been at the forefront of the solar revolution, bringing cutting-edge technology to the heart of Pakistan.</p>
+        <ul class="about-list">
+          <li>✨ <strong>Premium Technology</strong>: Tier-1 panels & inverters</li>
+          <li>🛠️ <strong>Expert Installation</strong>: Certified solar engineers</li>
+          <li>📞 <strong>24/7 Support</strong>: Dedicated after-sales service</li>
+        </ul>
+        <button class="btn-outline" onclick="openChat()">Learn More About Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ SOLUTIONS ═══════════════════════════ -->
+<section class="solutions-section" id="solutions">
+  <div class="container">
+    <div class="section-label">Our Service</div>
+    <h2 class="section-title text-center">Tailored Solar Solutions</h2>
+    <div class="solutions-grid">
+      <div class="solution-card">
+        <div class="solution-icon">🏡</div>
+        <h3>Residential Solar</h3>
+        <p>Eliminate your electricity bills and enjoy uninterrupted power for your family with our smart hybrid systems.</p>
+        <button class="link-btn" onclick="openChat()">Explore Home Solar →</button>
+      </div>
+      <div class="solution-card featured">
+        <div class="solution-icon">🏭</div>
+        <h3>Commercial & Industrial</h3>
+        <p>Optimize your business overheads with MW-scale solar projects designed for maximum ROI and sustainability.</p>
+        <button class="link-btn" onclick="openChat()">Explore Business Solar →</button>
+      </div>
+      <div class="solution-card">
+        <div class="solution-icon">🚜</div>
+        <h3>Agricultural Pumping</h3>
+        <p>High-power solar tube well solutions to modernize your irrigation and reduce fuel dependency.</p>
+        <button class="link-btn" onclick="openChat()">Explore Agri Solar →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ PRODUCTS ═══════════════════════════ -->
+<section class="products-section" id="products">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label">The Ecosystem</div>
+        <h2 class="section-title">Premium Hardware</h2>
+      </div>
+      <button class="btn-primary" onclick="openChat()">Download Catalog</button>
+    </div>
+    <div class="products-table-grid">
+      <div class="product-item">
+        <div class="p-img">☀️</div>
+        <div class="p-info">
+          <h3>Apollo 600W Mono-PERC</h3>
+          <p>Bi-facial | 23.5% Efficiency | Tier 1</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="p-img">⚡</div>
+        <div class="p-info">
+          <h3>Lumina Hybrid 10kW</h3>
+          <p>Dual MPPT | WiFi Integrated | Smart-Grid</p>
+        </div>
+      </div>
+      <div class="product-item">
+        <div class="p-img">🔋</div>
+        <div class="p-info">
+          <h3>PowerWall LFP 5kWh</h3>
+          <p>6000+ Cycles | modular Design | Safer Tech</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-label">Questions</div>
+    <h2 class="section-title text-center">Frequently Asked</h2>
+    <div class="faq-accordion">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What is the ROI on a 5kW system? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Most residential systems pay for themselves within 3-4 years through net metering and direct bill savings.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">Does Lumina handle net metering? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes! We provide end-to-end net metering services, including DISCO applications and bidirectional meter installation.</div>
+      </div>
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-q">What happens on cloudy days? <span class="faq-icon">+</span></div>
+        <div class="faq-a">Our hybrid systems automatically switch to battery or grid power to ensure you never experience an outage.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="f-brand">
+        <div class="logo">
+          <img src="assets/logo.png" height="30" />
+          <span class="logo-name">Lumina Solar</span>
+        </div>
+        <p>Leading the way to a sustainable future in Pakistan since 2010.</p>
+      </div>
+      <div class="f-links">
+        <h4>Navigation</h4>
+        <a href="#about">About</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#products">Products</a>
+      </div>
+      <div class="f-links">
+        <h4>Support</h4>
+        <a href="#">Dealers</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Lumina Energy Pakistan. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════ CHAT WIDGET ═══════════════════════════ -->
+<div class="chat-widget" id="chatWidget">
+  <button class="chat-launcher" id="chatLauncher" onclick="toggleChat()">
+    <span class="launcher-icon open-icon">
+      <svg viewBox="0 0 24 24" fill="white" width="28"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+    </span>
+    <span class="launcher-icon close-icon" style="display:none">✕</span>
+  </button>
+
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <div class="header-content">
+        <div class="status-indicator">
+          <span class="status-dot"></span>
+          <img src="assets/logo.png" alt="Lumina" class="header-logo" />
+        </div>
+        <div class="header-text">
+          <strong>Lumina Expert</strong>
+          <span>Online — Ready to help</span>
+        </div>
+      </div>
+      <button class="header-close" onclick="toggleChat()">✕</button>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+      <div id="leadForm" class="chat-inner-form">
+        <h3>Power Solutions</h3>
+        <p>Introduce yourself to start a live consult.</p>
+        <input type="text" id="leadName" placeholder="Your Name" />
+        <input type="email" id="leadEmail" placeholder="Email Address" />
+        <button class="start-chat-btn" onclick="startChat()">Start Conversation</button>
+        <div id="formError" class="error-text"></div>
+      </div>
+      
+      <div id="chatContent" style="display:none">
+        <div class="messages-area" id="messagesArea"></div>
+        <div class="typing-indicator" id="typingIndicator" style="display:none">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-container" id="chatInputArea" style="display:none">
+      <div class="chat-input-box">
+        <input type="text" id="messageInput" placeholder="Ask anything about solar..." onkeydown="handleKeyDown(event)" />
+        <button class="chat-send-icon" onclick="sendMessage()">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="chatbot.js"></script>
+<script>
+  function toggleFaq(el) {
+    el.classList.toggle('active');
+  }
+</script>
+</body>
+</html>

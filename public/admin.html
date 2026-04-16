@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumina Solar — Leads Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #D32F2F;
+      --secondary: #263238;
+      --bg: #F4F7F9;
+    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); margin: 0; padding: 40px; }
+    h1 { font-family: 'Outfit'; color: var(--secondary); margin-bottom: 30px; }
+    .card { background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); overflow: hidden; }
+    table { width: 100%; border-collapse: collapse; }
+    th { text-align: left; background: var(--secondary); color: white; padding: 15px 20px; font-size: 0.9rem; }
+    td { padding: 15px 20px; border-bottom: 1px solid #EEE; font-size: 0.95rem; }
+    tr:last-child td { border-bottom: none; }
+    .status { background: #E8F5E9; color: #2E7D32; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; }
+    .no-leads { padding: 40px; text-align: center; color: #999; }
+    .refresh-btn { background: var(--primary); color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: 600; cursor: pointer; margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Lumina Solar — Leads Dashboard</h1>
+  <button class="refresh-btn" onclick="fetchLeads()">Refresh Leads</button>
+  
+  <div class="card">
+    <table id="leadsTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Date Collected</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="leadsBody">
+        <tr><td colspan="4" class="no-leads">Loading leads...</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    async function fetchLeads() {
+      try {
+        const res = await fetch('/api/admin/leads');
+        const data = await res.json();
+        const body = document.getElementById('leadsBody');
+        
+        if (!data.leads || data.leads.length === 0) {
+          body.innerHTML = '<tr><td colspan="4" class="no-leads">No leads collected yet.</td></tr>';
+          return;
+        }
+
+        body.innerHTML = data.leads.map(lead => `
+          <tr>
+            <td><strong>${lead.name}</strong></td>
+            <td>${lead.email}</td>
+            <td>${new Date(lead.created_at).toLocaleString()}</td>
+            <td><span class="status">New Lead</span></td>
+          </tr>
+        `).join('');
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetchLeads();
+  </script>
+</body>
+</html>

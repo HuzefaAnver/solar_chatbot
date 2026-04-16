@@ -1,0 +1,56 @@
+# LUMINA SOLAR: MULTI-AGENT CHATBOT ECOSYSTEM
+
+This briefing outlines the specialized AI agents integrated into the Lumina Solar platform to provide a premium, white-glove experience for both customers and leads.
+
+---
+
+## 1. 🚀 THE SALES & ROI HUB
+*Focus: Lead generation and financial transparency.*
+
+### 📈 Energy ROI & Savings Calculator
+**Help:** Estimates system size and monthly savings.
+**Q:** "How much will I save on a 15k bill?"
+**A:** "A 5kW system would save you approx PKR 12,000/mo with a 3.5-year payback."
+
+### 🏠 AI Roof Analysis (Simulated)
+**Help:** Evaluates roof suitability via address/satellite simulation.
+**Q:** "Is my roof in DHA Phase 6 suitable?"
+**A:** "Analysis complete! Your roof has 850 sq ft of high-sunlight exposure. Perfect for a 10kW system."
+
+### 🔋 Product Recommendation Bot
+**Help:** E-commerce style guidance for hardware selection.
+**Q:** "I have a 8 Lakh budget and need backup for 2 ACs."
+**A:** "We recommend the Lumina Elite 10kW Hybrid with LFP Battery storage."
+
+---
+
+## 2. 🔧 THE CUSTOMER SUPPORT HUB
+*Focus: Post-sales experience and technical transparency.*
+
+### 🛠️ Installation Process Guide
+**Help:** Interactive timeline of the 5-step journey to going solar.
+**Q:** "What happens after the survey?"
+**A:** "We move to the Design phase where our engineers create a 3D layout for your approval."
+
+### 📍 Dealer & Service Locator
+**Help:** Finds the nearest authorized centers.
+**Q:** "Where is the nearest dealer in Multan?"
+**A:** "We have 3 authorized dealers in Multan. [View Map]"
+
+---
+
+## 3. ⚡ ENERGY USAGE ANALYZER
+*Focus: Personal engineering and sizing.*
+
+**Help:** Appliance-based consumption breakdown.
+**Q:** "I run 3 ACs and a pool pump. What size do I need?"
+**A:** "Your estimated consumption is 1200 units/mo. You require a 12kW system to reach zero billing."
+
+---
+
+## 📅 LEAD QUALIFICATION & BOOKING
+**Flow:**
+1. Residential/Commercial?
+2. Own the Property?
+3. Average Bill?
+4. **Action:** "Our expert is scheduled to call you at [Time]. Check your email!"
